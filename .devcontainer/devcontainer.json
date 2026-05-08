@@ -1,0 +1,30 @@
+{
+  "customizations": {
+    "vscode": {
+      "settings": {
+        "chat.disableAIFeatures": true,
+        "github.copilot.enable": {
+          "*": false
+        },
+        "github.copilot.inlineSuggest.enable": false,
+        "github.copilot.chat.enabled": false,
+        "chat.commandCenter.enabled": false,
+        "chat.agent.enabled": false,
+        "chat.extensionTools.enabled": false,
+        "workbench.settings.enableNaturalLanguageSearch": false,
+        "editor.formatOnSave": true
+      },
+      "extensions": [
+        "-GitHub.copilot",
+        "-GitHub.copilot-chat",
+        "ms-python.python",
+        "ms-python.vscode-pylance",
+        "charliermarsh.ruff"
+      ]
+    }
+  },
+  "postStartCommand": [
+    "code --disable-extension GitHub.copilot-chat",
+    "code --uninstall-extension GitHub.copilot-chat || true"
+  ]
+}
